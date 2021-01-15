@@ -1,0 +1,39 @@
+def InsertionSort(arr):
+    for i in range(len(arr)):
+        for j in range(i, 0, -1):
+            if arr[j] < arr[j - 1]:
+                arr[j], arr[j - 1] = arr[j - 1], arr[j]
+            else:
+                break 
+    return arr
+
+lst = [-1,-2,-3,-1,-2]
+# for _ in range(int(input())):
+#   lst.append[int(input())]
+
+# print(round(sum(lst)/len(lst)))
+
+# lst.sort()
+# print(lst[len(lst)//2])
+
+maxcnt = 0
+maxnum = 0
+maxlst=[]
+for i in lst:
+  if lst.count(i)>maxcnt:
+    maxcnt = lst.count(i)
+    maxnum = i
+    maxlst.append(maxnum)
+    print(maxnum)
+  elif lst.count(i) == maxcnt and i != maxnum:
+    maxlst.append(i)
+    print(i)
+
+maxlst.sort()
+print(maxlst)
+if len(maxlst) == 1:
+  print(maxlst[0])
+else: print(maxlst[1])
+
+
+# print(lst[len(lst)-1]-lst[0])
